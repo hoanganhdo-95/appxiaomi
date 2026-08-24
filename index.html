@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
     <title>Kho ứng dụng · Hoàng Anh</title>
-    <!-- Font Awesome 6 (miễn phí) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
         /* ---------- RESET & BASE ---------- */
@@ -24,7 +24,6 @@
             flex-direction: column;
         }
 
-        /* Kích thước chữ lớn dành cho TV */
         html {
             font-size: 20px;
         }
@@ -100,10 +99,10 @@
             color: #f6b83d;
         }
 
-        /* ---------- DANH SÁCH ỨNG DỤNG ---------- */
+        /* ---------- DANH SÁCH ỨNG DỤNG (LƯỚI 2 CỘT) ---------- */
         .app-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 14px;
             margin: 16px 0 32px;
         }
@@ -111,13 +110,13 @@
         .app-item {
             background: #161f2a;
             border-radius: 20px;
-            padding: 16px 24px;
+            padding: 16px 20px;
             border: 1px solid #2a3543;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 12px 20px;
+            gap: 10px 16px;
             transition: border-color 0.15s, background 0.15s;
         }
 
@@ -129,31 +128,31 @@
         .app-item .info {
             display: flex;
             flex-direction: column;
-            flex: 1 1 180px;
+            flex: 1 1 120px;
         }
 
         .app-item .info .name {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #f0f6fc;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }
 
         .app-item .info .name i {
             color: #f6b83d;
-            font-size: 1.2rem;
-            width: 1.8rem;
+            font-size: 1rem;
+            width: 1.6rem;
             text-align: center;
         }
 
         .app-item .info .desc {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #9aa9b9;
             margin-top: 2px;
-            margin-left: 2.8rem;
+            margin-left: 2.4rem;
         }
 
         .app-item .action {
@@ -163,13 +162,13 @@
         .btn-download {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: #f6b83d;
             border: none;
             color: #0d1117;
             font-weight: 700;
-            font-size: 1rem;
-            padding: 10px 28px;
+            font-size: 0.9rem;
+            padding: 8px 20px;
             border-radius: 40px;
             text-decoration: none;
             transition: background 0.2s, transform 0.1s;
@@ -180,7 +179,7 @@
         }
 
         .btn-download i {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .btn-download:hover {
@@ -192,7 +191,7 @@
             transform: scale(0.96);
         }
 
-        /* Nút "Truy cập link" đặc biệt */
+        /* Nút "Truy cập link" */
         .btn-link {
             background: #2d3748;
             color: #e6edf3;
@@ -204,7 +203,7 @@
             border-color: #f6b83d;
         }
 
-        /* ---------- PHẦN CUỐI: TẤT CẢ ỨNG DỤNG ---------- */
+        /* ---------- FOOTER: TẤT CẢ ỨNG DỤNG ---------- */
         .footer-section {
             margin-top: 20px;
             padding-top: 28px;
@@ -237,8 +236,12 @@
             color: #b0c0d0;
         }
 
-        /* ---------- RESPONSIVE TWEAKS ---------- */
+        /* ---------- RESPONSIVE: VỀ 1 CỘT KHI MÀN HÌNH NHỎ ---------- */
         @media (max-width: 700px) {
+            .app-list {
+                grid-template-columns: 1fr;
+            }
+
             .app-item {
                 flex-direction: column;
                 align-items: stretch;
@@ -294,7 +297,7 @@
         </div>
     </header>
 
-    <!-- ======== DANH SÁCH ỨNG DỤNG ======== -->
+    <!-- ======== DANH SÁCH ỨNG DỤNG (LƯỚI 2 CỘT) ======== -->
     <div class="app-list">
 
         <!-- 1. DL Store -->
@@ -352,7 +355,7 @@
             </div>
         </div>
 
-        <!-- 6. Projectivy Launcher v4.71 (PREMIUM)) -->
+        <!-- 6. Projectivy Launcher v4.71 (PREMIUM) -->
         <div class="app-item">
             <div class="info">
                 <div class="name"><i class="fas fa-th-large"></i> Projectivy Launcher v4.71 (PREMIUM)</div>
@@ -363,7 +366,7 @@
             </div>
         </div>
 
-        <!-- 7. Xplorer File Manager Premium -->
+        <!-- 7. X-plore v4.49.10 (Premium) -->
         <div class="app-item">
             <div class="info">
                 <div class="name"><i class="fas fa-folder-open"></i> X-plore v4.49.10 (Premium)</div>
@@ -374,7 +377,7 @@
             </div>
         </div>
 
-        <!-- 7.1. MiXplorer v6.71.11-Silver (Premium) -->
+        <!-- 8. MiXplorer v6.71.11-Silver (Premium) -->
         <div class="app-item">
             <div class="info">
                 <div class="name"><i class="fas fa-folder-open"></i> MiXplorer v6.71.11-Silver (Premium)</div>
@@ -385,18 +388,18 @@
             </div>
         </div>
 
-        <!-- 8. Đông Anh Store_25.3.2 -->
+        <!-- 9. Đông Anh Store_25.3.2 -->
         <div class="app-item">
             <div class="info">
                 <div class="name"><i class="fas fa-archive"></i> Đông Anh Store_25.3.2</div>
-                <div class="desc"></div> <!-- không có mô tả trong ảnh -->
+                <div class="desc"></div>
             </div>
             <div class="action">
                 <a href="https://www.mediafire.com/file/zhmpqxjb5ge1hqn/%25C4%2590o%25CC%2582ng_Anh_Store_25.3.2.apk/file" class="btn-download"><i class="fas fa-download"></i> Tải về</a>
             </div>
         </div>
 
-        <!-- 9. ASmartTube_stable_32.10 -->
+        <!-- 10. ASmartTube_stable_32.10 -->
         <div class="app-item">
             <div class="info">
                 <div class="name"><i class="fab fa-youtube"></i> ASmartTube_stable_32.10</div>
@@ -406,6 +409,18 @@
                 <a href="https://www.mediafire.com/file/pf86dmdxzod5pq5/ASmartTube_stable_32.10_universal.apk/file" class="btn-download"><i class="fas fa-download"></i> Tải về</a>
             </div>
         </div>
+
+        <!-- 11. Link dự phòng (thêm theo yêu cầu) -->
+        <div class="app-item">
+            <div class="info">
+                <div class="name"><i class="fas fa-link"></i> Link dự phòng</div>
+                <div class="desc">Dự phòng cho các ứng dụng</div>
+            </div>
+            <div class="action">
+                <a href="#" class="btn-download"><i class="fas fa-download"></i> Tải về</a>
+            </div>
+        </div>
+
     </div>
 
     <!-- ======== FOOTER: TẤT CẢ ỨNG DỤNG ======== -->
@@ -419,20 +434,9 @@
         </div>
     </div>
 
-    <!-- 7.1. Xplorer File Manager Premium -->
-        <div class="app-item">
-            <div class="info">
-                <div class="name"><i class="fas fa-folder-open"></i> Link dự phòng</div>
-                <div class="desc">Quản lý tập tin</div>
-            </div>
-            <div class="action">
-                <a href="#" class="btn-download"><i class="fas fa-download"></i> Tải về</a>
-            </div>
-        </div>
-
-    <!-- ======== GHI CHÚ NHỎ ======== -->
+    <!-- ======== GHI CHÚ ======== -->
     <div style="margin-top: 28px; font-size: 0.8rem; color: #6b7b8b; border-top: 1px solid #1e2835; padding-top: 18px; text-align: center;">
-        <i class="fas fa-info-circle"></i> Trang web lưu trữ ứng dụng TV Xiaomi · Bấm nút <strong>Tải về</strong> để tải ứng dụng (đường dẫn mẫu)
+        <i class="fas fa-info-circle"></i> Trang web lưu trữ ứng dụng TV Xiaomi · Bấm nút <strong>Tải về</strong> để tải ứng dụng
     </div>
 
 </body>
